@@ -17,7 +17,6 @@ $payer->phone = array(
   "area_code" => "52",
   "number" => "5549737300"
 );
- 
 $payer->address = array(
   "street_name" => "Insurgentes Sur",
   "street_number" => 1602,
@@ -187,6 +186,7 @@ $preference->save();
                                             data-preference-id="<?php echo $preference->id; ?>">
                                       </script>
                                     </form>
+                                    <a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a>
                                 </div>
                             </div>
                         </div>
