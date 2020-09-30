@@ -47,6 +47,8 @@ $preference->payment_methods = array(
   );
 $preference->save();
 
+print $preference;
+
 ?>
 
 <!DOCTYPE html>
