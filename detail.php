@@ -46,9 +46,6 @@ $preference->payment_methods = array(
     "installments" => 6
   );
 $preference->save();
-
-print $preference;
-
 ?>
 
 <!DOCTYPE html>
