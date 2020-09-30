@@ -7,24 +7,24 @@ MercadoPago\SDK::setAccessToken('APP_USR-1159009372558727-072921-8d0b9980c749498
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 
-/*Datos de pagador
+//Datos de pagador
 $payer = new MercadoPago\Payer();
-$payer->name = "Charles";
-$payer->surname = "Luevano";
-$payer->email = "charles@hotmail.com";
-$payer->date_created = "2018-06-02T12:58:41.425-04:00";
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+$payer->email = "test_user58295862@testuser.com";
+//$payer->date_created = "2018-06-02T12:58:41.425-04:00";
 $payer->phone = array(
-  "area_code" => "",
-  "number" => "949 128 866"
+  "area_code" => "52",
+  "number" => "5549737300"
 );
  
 $payer->address = array(
-  "street_name" => "Cuesta Miguel Armendáriz",
-  "street_number" => 1004,
-  "zip_code" => "11020"
-);*/
+  "street_name" => "Insurgentes Sur",
+  "street_number" => 1602,
+  "zip_code" => "03940"
+);
 
-// Crea un ítem en la preferencia
+// Crea un ítem
 $item = new MercadoPago\Item();
 $item->id = 1234;
 $item->title = "". $_POST['title'] .""  ;
@@ -35,6 +35,7 @@ $item->unit_price = $_POST['price'];
 
 //crea una preferencia
 $preference->items = array($item);
+$preference->payer = array($payer);
 //Tipos de pago y mensualidades
 $preference->payment_methods = array(
     "excluded_payment_methods" => array(
