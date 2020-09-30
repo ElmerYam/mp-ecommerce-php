@@ -26,9 +26,14 @@ $payer->address = array(
 
 // Crea un ítem en la preferencia
 $item = new MercadoPago\Item();
+$item->id = 1234;
 $item->title = "". $_POST['title'] .""  ;
+$item->description = "Dispositivo móvil de Tienda e-commerce";
+$item->picture_url = "". $_POST['img'] ."";
 $item->quantity = 1;
 $item->unit_price = $_POST['price'];
+
+//crea una preferencia
 $preference->items = array($item);
 //Tipos de pago y mensualidades
 $preference->payment_methods = array(
@@ -170,10 +175,10 @@ $preference->save();
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo $_POST['unit'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $_POST['price'] ?>
                                         </h3>
                                     </div>
                                     <!--crea el boton de pago-->
