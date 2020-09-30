@@ -35,7 +35,6 @@ $item->unit_price = $_POST['price'];
 
 //crea una preferencia
 $preference->items = array($item);
-$preference->payer = array($payer);
 //Tipos de pago y mensualidades
 $preference->payment_methods = array(
     "excluded_payment_methods" => array(
